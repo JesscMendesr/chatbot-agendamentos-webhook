@@ -52,7 +52,7 @@ async function salvarAgendamento(dadosAgendamento) {
     const params = {
         TableName: 'agendamentos-esmalteria',
         Item: {
-            id: `agendamento-${Date.now()}`,
+            id: Date.now(),
             telefone: dadosAgendamento.telefone,
             nome_cliente: dadosAgendamento.nome_cliente,
             data: dadosAgendamento.data,
