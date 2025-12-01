@@ -29,10 +29,10 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: sa-east-1  # ou outra região
+          aws-region: sa-east-2  # ou outra região
 
       - name: Deploy Lambda
         run: |
           aws lambda update-function-code \
-            --function-name nome-da-sua-lambda \
+            --function-name chatbot-agendamento-twilio \
             --zip-file fileb://function.zip
